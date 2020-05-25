@@ -1,0 +1,16 @@
+<div class="container1 bookImage border-right border-bottom rounded">
+  <div class="row">
+    <div class="col-6">
+        <img [src]="product.imageUrl" alt="">
+    </div>
+    <div class="col-6 bookDesc">
+        <h1>{{product?.name}}</h1>
+        <span class="description">{{produt?.description}}</span>
+        <br>
+        <span class="categories" *ngFor="let category of product.categories">{{category}}</span><br>
+        <span class="writer">{{product?.writer}}</span><br>
+        <span class="price">${{product?.price}}</span><br>
+
+    </div>
+  </div>
+</div>

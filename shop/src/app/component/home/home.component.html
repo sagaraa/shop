@@ -1,0 +1,27 @@
+<div class="container-fluid d-inline">
+  <div class="row">
+    <div class="col-3"> 
+      <app-sidebar id="sidebar"></app-sidebar>
+    </div>
+    <div class="col-9" id="main">
+      <div class="block">
+      </div>
+        <div class="container-fluid" id="mainContainer">
+            <div class="row">
+              <div class="col-4" *ngFor="let product of products">
+                  <div class="card" style="width: 18rem;" (click)="changeComponent('product/'+product._id,product)">
+                    <img [src]="product.imageUrl" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{product?.name}}</h5>
+                      <p class="card-text">{{product?.writer}} {{product?.description}} {{product?.price}}</p>
+                      <!-- <p class="card-text"></p>
+                      <p class="card-text"></p> -->
+                      <p class="card-text"><span *ngFor="let category of product?.categories">{{category}} </span></p>
+                      <button class="btn btn-primary" (click)="addToCart(product)">buy</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+  </div>
+</div>

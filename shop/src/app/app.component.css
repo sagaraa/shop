@@ -1,0 +1,13 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#header{
+    height: 50px!important;
+}
+#home{
+    width: 100%;
+    position: relative;
+}
